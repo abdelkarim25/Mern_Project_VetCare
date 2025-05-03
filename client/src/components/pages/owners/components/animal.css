@@ -1,0 +1,34 @@
+/* Custom select dropdown */
+.form-select {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+    color: #333;
+  }
+  
+  /* Selected option highlight */
+  .form-select option:checked {
+    background-color: rgb(109,179,63) !important;
+    color: white;
+  }
+  
+  /* Hover effect */
+  .form-select option:hover {
+    background-color: rgb(89, 149, 53) !important; /* Slightly darker green */
+  }
+  
+  /* Remove default arrow (optional) */
+  .form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+  }
+  
+  .form-control:focus {
+    border-color: rgb(109,179,63);
+    box-shadow: 0 0 0 0.25rem rgba(109,179,63, 0.25);
+  }

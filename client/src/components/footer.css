@@ -1,0 +1,76 @@
+/* Footer list container: minimal padding & centered */
+.full {
+    display: flex;
+    justify-content: center; /* center contents */
+    list-style: none;
+    padding: 6px;       /* smaller padding */
+    gap: 4px;           /* smaller gap */
+    margin-left: 0;     /* remove offset */
+    padding-bottom: 4px;
+  }
+  
+  /* Footer content area */
+  .footer-contenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(54, 54, 54);
+    color: rgb(145, 143, 143);
+    padding-bottom: 1px;
+  }
+  
+  /* List items: tiny font and no margin */
+  ul li {
+    list-style: none;
+    margin: 0;
+    font-size: 1em;     /* ~16px */
+    margin-top: 4px;
+  }
+  
+  /* Icons/text inside list: smaller size */
+  ul span {
+    font-size: 1.2em;   /* ~19px */
+  }
+  
+  /* Copyright bar */
+  .copyright {
+    background-color: hsl(96, 65%, 38%);
+    color: black;
+    font-size: 12px;    /* smaller text */
+    text-align: center;
+    padding: 4px 0;
+  }
+  
+  /* Text selection highlight */
+  ::selection {
+    background-color: rgb(109, 179, 63);
+    color: white;
+  }
+  
+  /* SVG icon spacing: minimal margins */
+  svg {
+    margin-right: 4px;
+    margin-bottom: 2px;
+  }
+  
+  /* Hover color accents */
+  .discord:hover { color: rgb(86, 98, 246); }
+  .email:hover   { color: rgb(231,  60,  60); }
+  .phone:hover   { color: rgb(117, 117, 247); }
+  
+  /* “About” link: minimal padding */
+  .about {
+    padding: 8px;
+    font-size: 40px;
+  }
+  .about:hover {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  /* Location hover color */
+  .location:hover {
+    color: green;
+  }
+  

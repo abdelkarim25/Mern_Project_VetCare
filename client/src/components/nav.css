@@ -1,0 +1,53 @@
+.title-h3 a {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 8px rgba(109, 179, 63, 0.596);
+    text-decoration: none;
+   
+}
+
+.title-h3 a:hover {
+    color: rgb(109, 179, 63);
+    transition: 0.4s;
+
+}
+
+.navbar {
+    background-color: rgb(54, 54, 54);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav-page {
+    color: rgb(130, 130, 130);
+    text-decoration: none;
+}
+
+.nav-btn {
+    border: 1px solid transparent;
+    color: rgb(54, 54, 54);
+    padding: 10px;
+    background-color: rgb(54, 54, 54);
+    color: rgb(130, 130, 130);
+}
+
+.nav-btn:hover {
+    background-color: rgb(109, 179, 63);
+    color: white;
+    transition: 0.4s;
+}

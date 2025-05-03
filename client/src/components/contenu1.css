@@ -1,0 +1,80 @@
+.btn {
+    border: 1px none black;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: rgb(204, 206, 207);
+}
+
+.contenu-h1 {
+    color: rgb(235, 242, 242);
+    background-color:#3f4c43;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.h1-welcom {
+    color: #fff;
+    font-size: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    align-items: center;
+    opacity: 0;
+    animation: h1Welcom 2s ease-in forwards;
+}
+@keyframes h1Welcom {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+::selection{
+    background-color: rgb(109, 179, 63);
+    color: white;
+}
+
+.div-btn {
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.swipe-button {
+    position: relative;
+    padding: 12px 24px;
+    font-size: 20px;
+    color: #3f4c43;
+    background: transparent;
+    border: 2px solid  #3f4c43;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s;
+    margin: 2px;
+
+}
+
+.swipe-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #3f4c43;
+    transition: left 0.4s;
+    z-index: -1;
+}
+
+.swipe-button:hover {
+    color: white;
+
+}
+
+.swipe-button:hover::before {
+    left: 0;
+}
+.paragraf{
+    color: #3f4c43;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
