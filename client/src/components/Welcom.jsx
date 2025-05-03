@@ -30,8 +30,12 @@ export default function Welcome() {
                     <section class="container py-5" id="about">
   <div class="row align-items-center">
     <div class="col-md-6">
-      <h2 class="section-title">About VetCare</h2>
-      <p>At VetCare, your pet’s health and happiness are our top priorities. Our experienced team provides compassionate care tailored to your furry friends' needs.</p>
+      <h2 class="section-title" className='paragraf'>About VetCare</h2>
+      <p>Their dedicated team combines expertise with genuine compassion, ensuring every animal receives personalized care in a calming,
+         modern environment. With state-of-the-art facilities and a stress-free approach, they prioritize both physical
+          health and emotional well-being. It’s clear they understand the bond between pets and owners, offering not just treatment,
+           but trust and comfort. VetCare stands out as a place where science meets heart perfect for pet parents who want the best for
+            their furry family members.</p>
       <p>We offer state-of-the-art medical services in a welcoming and stress-free environment.</p>
     </div>
     <div class="col-md-6">
@@ -39,6 +43,11 @@ export default function Welcome() {
   src="/images/photo-1558788353-f76d92427f16.jpg" 
   alt="Veterinary clinic" 
   className="img-fluid rounded shadow"
+  style={{ 
+    width: '550px',
+    height: 'auto',
+    maxWidth: '100%'
+  }}
 />
     </div>
   </div>
@@ -49,22 +58,22 @@ export default function Welcome() {
     <h2 class="section-title text-center text-success">Our Services</h2>
     <div class="row g-4">
       <div class="col-md-4 text-center">
-        <div class="p-4 border rounded shadow-sm">
-          <i class="bi bi-heart-pulse service-icon"></i>
+        <div class="p-4 border rounded shadow-sm success">
+          <i class="bi bi-heart-pulse service-icon text-success"></i>
           <h5 class="mt-3">Preventive Care</h5>
           <p>Regular exams, vaccinations, and parasite prevention to keep your pets healthy.</p>
         </div>
       </div>
       <div class="col-md-4 text-center">
         <div class="p-4 border rounded shadow-sm">
-          <i class="bi bi-activity service-icon"></i>
+          <i class="bi bi-activity service-icon text-success"></i>
           <h5 class="mt-3">Surgery</h5>
           <p>From routine spay/neuter procedures to advanced orthopedic surgeries.</p>
         </div>
       </div>
       <div class="col-md-4 text-center">
         <div class="p-4 border rounded shadow-sm">
-          <i class="bi bi-house-heart service-icon"></i>
+          <i class="bi bi-house-heart service-icon text-success"></i>
           <h5 class="mt-3">Emergency Care</h5>
           <p>24/7 emergency support when you need us the most for urgent pet care.</p>
         </div>
@@ -151,7 +160,7 @@ export default function Welcome() {
 <section className="py-5" id="location">
   <div className="container text-center">
     <h2 className="section-title mb-4 display-5 fw-bold text-success">Our Location</h2>
-    <p className="mb-4 lead">Visit us at our clinic! We are located in the heart of the city to serve you better.</p>
+    <p className="mb-4 lead">Visit us at our clinic! We are located in the heart of the Nador city to serve you better.</p>
     <div className="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12345.6789!2d-2.924507!3d35.174285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDEwJzI3LjQiTiAywrA1NSczNi4yIlc!5e0!3m2!1sen!2sus!4v1234567890123"
