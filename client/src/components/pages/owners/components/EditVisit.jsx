@@ -66,27 +66,47 @@ export default function EditVisit() {
     };
 
 
-    return (
-        <div className="container">
-            <h1>Add  New  Visit</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="date" id="input-name" name='date' value={formatDate(visit.date)} onChange={handleChange} class="form-control col-8 ml-0 text-hover-costem" />
-                
-                <label htmlFor=""> Description : </label>
-                <br /> 
-                <textarea className="form-control" name='description' value={visit.description} onChange={handleChange}></textarea>
-                
-                {error && (
-                    <div className="alert alert-danger" role="alert">
-                        {error}
-                    </div>
-                )}
-
+   // EditVisit.jsx
+return (
+    <div className="container form-container">
+        <h1>Edit Visit</h1>
+        <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+                <label htmlFor="visit-date" className="form-label">Visit Date</label>
+                <input 
+                    type="date" 
+                    id="visit-date" 
+                    name="date" 
+                    value={formatDate(visit.date)} 
+                    onChange={handleChange} 
+                    className="form-control" 
+                />
+            </div>
+            
+            <div className="mb-3">
+                <label htmlFor="visit-description" className="form-label">Description</label>
+                <textarea 
+                    id="visit-description" 
+                    name="description" 
+                    value={visit.description} 
+                    onChange={handleChange} 
+                    className="form-control" 
+                    rows="4"
+                ></textarea>
+            </div>
+            
+            {error && (
+                <div className="alert alert-danger" role="alert">
+                    {error}
+                </div>
+            )}
+            
+            <div className="form-footer">
                 <button disabled={loading} type="submit" className="btn-fowner">
                     {loading ? "Updating..." : "Update Visit"}
                 </button>
-                
-            </form>
-        </div>
-    );
+            </div>
+        </form>
+    </div>
+);
 }

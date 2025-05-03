@@ -115,46 +115,80 @@ function Info() {
                 </div>
     
                 <div className="row">
-                    <div className="col">
-                        <h2 className="section-title">Pets and Visits</h2>
-                            {owner.pets?.map(pet => 
-                                <div key={pet._id} className="card pet-card mb-4">
-                                    <div className="card-body">
-                                        <h5 className="card-title">{pet.name}</h5>
+    <div className="col">
+        <h2 className="section-title">Pets and Visits</h2>
+        {owner.pets?.map(pet => (
+            <div key={pet._id} className="card pet-card mb-4">
+                <div className="card-body">
+                    <div className="row">
+                        {/* Pet Information Section */}
+                        <div className="col-md-5 border-end pe-4">
+                            <h5 className="card-title mb-3">{pet.name}</h5>
+                            <div className="row mb-2">
+                                <div className="col-md-5 fw-bold">Birth Date:</div>
+                                <div className="col-md-7">{formatDate(pet.birthDate)}</div>
+                            </div>
+                            <div className="row mb-3">
+                                <div className="col-md-5 fw-bold">Type:</div>
+                                <div className="col-md-7">{pet.type}</div>
+                            </div>
+                            <div className="d-flex gap-2 mt-3">
+                                <Link to={`/owners/${owner._id}/pets/${pet._id}/edit`} 
+                                    className="btn-fowner flex-grow-1 text-center">
+                                    Edit Pet
+                                </Link>
+                                <button onClick={() => handleRemovePet(pet._id)} 
+                                    className="btn btn-danger btn-sm flex-grow-1">
+                                    Remove Pet
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Visits Section */}
+                        <div className="col-md-7 ps-4">
+                            <div className="d-flex justify-content-between align-items-center mb-3">
+                                <h5 className="card-title mb-0">Visits</h5>
+                                <Link to={`/owners/${owner._id}/pets/${pet._id}/visits/create`} 
+                                    className="btn-fowner">
+                                    Add Visit
+                                </Link>
+                            </div>
+
+                            {pet.visits?.length > 0 ? (
+                                pet.visits.map(visit => (
+                                    <div key={visit._id} className="visit-item mb-3 p-3 bg-light rounded">
                                         <div className="row mb-2">
-                                            <div className="col-md-2 fw-bold">Birth Date</div>
-                                            <div className="col-md-4">{formatDate(pet.birthDate)}</div>
+                                            <div className="col-md-4 fw-bold">Visit Date:</div>
+                                            <div className="col-md-8">{formatDate(visit.date)}</div>
                                         </div>
-                                            {pet.visits?.map(visit =>
-                                                <>
-                                                    <div key={visit._id} className="row mb-3">
-                                                        <div className="col-md-2 fw-bold">Visit Date</div>
-                                                        <div className="col-md-4">{formatDate(visit.date)}</div>
-                                                        <div className="col-md-2 fw-bold">Description</div>
-                                                        <div className="col-md-10">{visit.description}</div>
-                                                    </div>
-                                                    <Link to={`/owners/${owner._id}/pets/${pet._id}/visits/${visit._id}/edit`} className="btn-fowner">Edit Visit</Link>
-                                                    <button onClick={() => handleRemoveVisit(pet._id, visit._id)} className="btn btn-danger btn-sm">
-                                                        Remove Visit
-                                                    </button>
-                                                </>
-                                            )}
-                                        <div className="row">
-                                            <div className="col-md-2 fw-bold">Type</div>
-                                            <div className="col-md-4">{pet.type}</div>
-                                            <div className="col-md-6 text-end">
-                                                <Link to={`/owners/${owner._id}/pets/${pet._id}/visits/create`} className="btn-fowner">Add Visit</Link>
-                                                <Link to={`/owners/${owner._id}/pets/${pet._id}/edit`} className="btn-fowner">Edit Pet</Link>
-                                                <button onClick={() => handleRemovePet(pet._id)} className="btn btn-danger btn-sm">
-                                                    Remove Pet
-                                                </button>
-                                            </div>
+                                        <div className="row mb-3">
+                                            <div className="col-md-4 fw-bold">Description:</div>
+                                            <div className="col-md-8">{visit.description}</div>
+                                        </div>
+                                        <div className="d-flex gap-2">
+                                            <Link to={`/owners/${owner._id}/pets/${pet._id}/visits/${visit._id}/edit`} 
+                                                className="btn-fowner btn-sm flex-grow-1">
+                                                Edit Visit
+                                            </Link>
+                                            <button onClick={() => handleRemoveVisit(pet._id, visit._id)} 
+                                                className="btn btn-danger btn-sm flex-grow-1">
+                                                Remove Visit
+                                            </button>
                                         </div>
                                     </div>
+                                ))
+                            ) : (
+                                <div className="text-muted p-3 bg-light rounded">
+                                    No visits recorded for this pet
                                 </div>
                             )}
+                        </div>
                     </div>
                 </div>
+            </div>
+        ))}
+    </div>
+</div>
             </div>
     );
 }

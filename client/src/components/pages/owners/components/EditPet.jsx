@@ -61,31 +61,40 @@ export default function EditPet() {
     };
         
 
-    return (
-        <div className="container">
-            <h1>Edit Pet</h1>
-            <form onSubmit={handleSubmit}>
+    // EditPet.jsx
+return (
+    <div className="container form-container">
+        <h1>Edit Pet</h1>
+        <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+                <label htmlFor="input-name" className="form-label">Pet Name</label>
                 <input
                     type="text"
                     id="input-name"
                     name="name"
                     value={pet.name}
                     onChange={handleChange}
-                    className="form-control col-8 ml-0 text-hover-costem"
+                    className="form-control"
                     placeholder="Pet Name"
                 />
-                <label>Birth Date:</label>
+            </div>
+            
+            <div className="mb-3">
+                <label htmlFor="input-birthday" className="form-label">Birth Date</label>
                 <input
                     type="date"
                     id="input-birthday"
                     name="birthDate"
                     value={formatDate(pet.birthDate)}
                     onChange={handleChange}
-                    className="form-control col-8 ml-0 text-hover-costem"
+                    className="form-control"
                 />
-                <label>Type:</label>
+            </div>
+            
+            <div className="mb-3">
+                <label htmlFor="input-type" className="form-label">Type</label>
                 <select
-                    className="form-select form-control"
+                    className="form-select"
                     id="input-type"
                     name="type"
                     value={pet.type}
@@ -96,11 +105,16 @@ export default function EditPet() {
                     <option value="cat">Cat</option>
                     <option value="bird">Bird</option>
                 </select>
-                {error && <div className="alert alert-danger">{error}</div>}
+            </div>
+            
+            {error && <div className="alert alert-danger">{error}</div>}
+            
+            <div className="form-footer">
                 <button type="submit" className="btn-fowner" disabled={loading}>
                     {loading ? "Updating..." : "Update Pet"}
                 </button>
-            </form>
-        </div>
-    );
+            </div>
+        </form>
+    </div>
+);
     }
