@@ -89,26 +89,26 @@ function Info() {
                             </div>
                         :
                         <>
-                            <div className="row mb-3">
-                                <div className="col-md-2 fw-bold">Name</div>
-                                <div className="col-md-10">{owner.First_Name} {owner.Last_Name}</div>
-                            </div>
-                            <div className="row mb-3">
-                                <div className="col-md-2 fw-bold">Address</div>
-                                <div className="col-md-10">{owner.Adress}</div>
-                            </div>
-                            <div className="row mb-3">
-                                <div className="col-md-2 fw-bold">City</div>
-                                <div className="col-md-10">{owner.City}</div>
-                            </div>
-                            <div className="row mb-3">
-                                <div className="col-md-2 fw-bold">Telephone</div>
-                                <div className="col-md-10">{owner.Telephone}</div>
-                            </div>
-                            <div className="mt-3">
-                                <Link to={`/owners/${id}/update`} className="btn-fowner">Edit Owner</Link>
-                                <Link to={`/owners/${id}/pets/create`} className="btn-fowner">Add New Pet</Link>
-                            </div>
+                            <div className="row mb-3 p-3 border rounded bg-light">  {/* Added container styling */}
+        <div className="col-md-2 fw-bold">Name</div>
+        <div className="col-md-10">{owner.First_Name} {owner.Last_Name}</div>
+    </div>
+    <div className="row mb-3 p-3 border rounded bg-light">  {/* Added container styling */}
+        <div className="col-md-2 fw-bold">Address</div>
+        <div className="col-md-10">{owner.Adress}</div>
+    </div>
+    <div className="row mb-3 p-3 border rounded bg-light">  {/* Added container styling */}
+        <div className="col-md-2 fw-bold">City</div>
+        <div className="col-md-10">{owner.City}</div>
+    </div>
+    <div className="row mb-3 p-3 border rounded bg-light">  {/* Added container styling */}
+        <div className="col-md-2 fw-bold">Telephone</div>
+        <div className="col-md-10">{owner.Telephone}</div>
+    </div>
+    <div className="mt-4">  {/* Added container styling */}
+        <Link to={`/owners/${id}/update`} className="btn-fowner me-3">Edit Owner</Link>
+        <Link to={`/owners/${id}/pets/create`} className="btn-fowner">Add New Pet</Link>
+    </div>
                         </>
                         }
                     </div>

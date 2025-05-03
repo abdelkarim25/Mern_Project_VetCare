@@ -20,12 +20,11 @@ export default function Footer() {
                             <b>Phone Number</b>
                         </span>
                         <li>
-                            Oukchine
+                        +212 695244519
                         </li>
                         <li>
-                            wakrim
+                            +212 760791812
                         </li>
-
                     </ul>
 
                     <ul>
@@ -37,10 +36,10 @@ export default function Footer() {
                             <b> E-mail</b>
                         </span>
                         <li>
-                            oukhchine
+                            AHMED.OUKHCHINE.ESTN24@ump.ac.ma
                         </li>
                         <li>
-                            wakrim
+                        ABDELKARIM.WAKRIM.ESTN24@ump.ac.ma
                         </li>
                     </ul>
 
@@ -52,10 +51,10 @@ export default function Footer() {
                             <b>Discord</b>
                         </span>
                         <li>
-                            oukhchine
+                            Ahmed_OKN
                         </li>
                         <li>
-                            wakrim
+                            Nagazaki77
                         </li>
                     </ul>
                     <ul>
