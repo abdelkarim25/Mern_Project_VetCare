@@ -95,4 +95,97 @@
     width: 150px;
     height: 150px;
   }
-
+/* Profile image styling */
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    position: relative;
+  }
+  
+  .avatar-frame {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #e9f5e9;
+    transition: all 0.3s ease;
+  }
+  
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-card:hover .avatar-frame {
+    border-color: #28a745;
+  }
+  
+  .team-card:hover .profile-img {
+    transform: scale(1.05);
+  }
+  
+  /* Add this to your CSS file */
+.avatar {
+    position: relative;
+    background-color: #f8f9fa; /* Fallback background */
+  }
+  
+  .avatar img {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .avatar::before {
+    content: attr(alt);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    font-size: 14px;
+    color: #6c757d;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .avatar img:not([src]) {
+    opacity: 0; /* Hide broken images */
+  }
+ 
+/* Improved avatar styling with fallback */
+.avatar {
+    position: relative;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar img {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  
+  /* Initials fallback when image fails to load */
+  .avatar::after {
+    content: attr(data-initials);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6c757d;
+    display: none;
+  }
+  
+  .avatar img.error + .avatar::after {
+    display: block;
+  }
+  
+  .avatar img.error {
+    display: none;
+  }

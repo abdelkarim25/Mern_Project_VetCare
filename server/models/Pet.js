@@ -14,7 +14,7 @@ const PetSchema = new mongoose.Schema({
   type: {
     type: String,
     required: true,
-    enum: ['dog', 'cat', 'bird', 'reptile', 'hamster', 'other']
+    enum: ['dog', 'cat', 'bird', 'rabbit', 'turtle', 'hamster']
   },
   ownerId: {
     type: mongoose.Schema.Types.ObjectId,

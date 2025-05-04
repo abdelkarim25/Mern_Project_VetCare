@@ -11,7 +11,7 @@ export default function Welcome() {
                 <b>
                     <h1 className="h1-welcom">
                       
-                        Welcome To Spring
+                        Welcome To Vet Haven
                     </h1>
                 </b>
                 <br /><br /><br />
@@ -24,19 +24,19 @@ export default function Welcome() {
                 </div>
                 <br /><br /><br />
                 <div className="div-btn">
-                    <button class="swipe-button">Make your animal fill happy </button>
+                    <button class="swipe-button">Bring joy to your furry friends with Vet Haven </button>
                     </div>
 
                     <section class="container py-5" id="about">
   <div class="row align-items-center">
     <div class="col-md-6">
-      <h2 class="section-title" className='paragraf'>About VetCare</h2>
-      <p>Their dedicated team combines expertise with genuine compassion, ensuring every animal receives personalized care in a calming,
-         modern environment. With state-of-the-art facilities and a stress-free approach, they prioritize both physical
-          health and emotional well-being. It’s clear they understand the bond between pets and owners, offering not just treatment,
-           but trust and comfort. VetCare stands out as a place where science meets heart perfect for pet parents who want the best for
-            their furry family members.</p>
-      <p>We offer state-of-the-art medical services in a welcoming and stress-free environment.</p>
+      <h2 class="section-title" className='paragraf'>About Vet Haven</h2>
+      <p>
+At Vet Haven, we bring together advanced veterinary care and heartfelt compassion to create a sanctuary for pets and their families. Our dedicated team of professionals ensures that every animal receives personalized attention in a calm, modern setting designed to put both pets and their owners at ease.
+
+With cutting-edge facilities and a focus on reducing stress, we prioritize the physical health and emotional well-being of every furry friend. We understand the deep bond between pets and their families, offering more than just medical care – we provide trust, comfort, and a place where your pet’s happiness and health come first.
+
+Vet Haven is where innovation meets care, making it the perfect choice for pet parents who want the very best for their beloved companions.</p>
     </div>
     <div class="col-md-6">
     <img 
@@ -92,66 +92,91 @@ export default function Welcome() {
     {/* Team Member 1 */}
     <div className="col-md-4 col-lg-3">
       <div className="card h-100 border-0 shadow-sm text-center p-4">
-        <div className="avatar mx-auto mb-3 bg-light rounded-circle d-flex align-items-center justify-content-center" style={{width: '120px', height: '120px'}}>
-          <span className="fs-1 text-muted">EC</span>
+        <div className="avatar mx-auto mb-3 rounded-circle overflow-hidden" style={{width: '120px', height: '120px'}}>
+          <img 
+            src="/images/vet1.jpeg" 
+            alt="Dr. Emily Carter" 
+            className="w-100 h-100 object-fit-cover"
+          />
         </div>
         <h5 className="fw-bold">Dr. Emily Carter</h5>
-        <p className="text-muted mb-0">Veterinarian</p>
+        <p className="text-muted mb-0">Dental Care</p>
       </div>
     </div>
 
-    {/* Team Member 2 */}
+    
     <div className="col-md-4 col-lg-3">
       <div className="card h-100 border-0 shadow-sm text-center p-4">
-        <div className="avatar mx-auto mb-3 bg-light rounded-circle d-flex align-items-center justify-content-center" style={{width: '120px', height: '120px'}}>
-          <span className="fs-1 text-muted">ML</span>
+        <div className="avatar mx-auto mb-3 rounded-circle overflow-hidden" style={{width: '120px', height: '120px'}}>
+        <img 
+  src="/images/vet2.jpg" 
+  alt="Dr. Emily Carter" 
+  className="w-100 h-100 object-fit-cover"
+  
+/>
         </div>
         <h5 className="fw-bold">Dr. Michael Lee</h5>
-        <p className="text-muted mb-0">Veterinary Surgeon</p>
+        <p className="text-muted mb-0">Nutritional Counseling</p>
       </div>
     </div>
 
-    {/* Team Member 3 */}
+    
     <div className="col-md-4 col-lg-3">
       <div className="card h-100 border-0 shadow-sm text-center p-4">
-        <div className="avatar mx-auto mb-3 bg-light rounded-circle d-flex align-items-center justify-content-center" style={{width: '120px', height: '120px'}}>
-          <span className="fs-1 text-muted">ST</span>
+        <div className="avatar mx-auto mb-3 rounded-circle overflow-hidden" style={{width: '120px', height: '120px'}}>
+          <img 
+            src="/images/vet3.jpg" 
+            alt="Sarah Thompson" 
+            className="w-100 h-100 object-fit-cover"
+          />
         </div>
         <h5 className="fw-bold">Sarah Thompson</h5>
-        <p className="text-muted mb-0">Vet Technician</p>
+        <p className="text-muted mb-0">Diagnostics (imaging and laboratory)</p>
       </div>
     </div>
 
-    {/* Team Member 4 */}
+    
     <div className="col-md-4 col-lg-3">
       <div className="card h-100 border-0 shadow-sm text-center p-4">
-        <div className="avatar mx-auto mb-3 bg-light rounded-circle d-flex align-items-center justify-content-center" style={{width: '120px', height: '120px'}}>
-          <span className="fs-1 text-muted">SF</span>
+        <div className="avatar mx-auto mb-3 rounded-circle overflow-hidden" style={{width: '120px', height: '120px'}}>
+          <img 
+            src="/images/vet4.jpg" 
+            alt="Sophia Fisher" 
+            className="w-100 h-100 object-fit-cover"
+          />
         </div>
         <h5 className="fw-bold">Sophia Fisher</h5>
-        <p className="text-muted mb-0">Vet Technician</p>
+        <p className="text-muted mb-0">Preventive Medicine and Vaccination</p>
       </div>
     </div>
 
-    {/* Team Member 5 */}
+    
     <div className="col-md-4 col-lg-3">
       <div className="card h-100 border-0 shadow-sm text-center p-4">
-        <div className="avatar mx-auto mb-3 bg-light rounded-circle d-flex align-items-center justify-content-center" style={{width: '120px', height: '120px'}}>
-          <span className="fs-1 text-muted">DJ</span>
+        <div className="avatar mx-auto mb-3 rounded-circle overflow-hidden" style={{width: '120px', height: '120px'}}>
+          <img 
+            src="/images/vet5.jpg" 
+            alt="David Johnson" 
+            className="w-100 h-100 object-fit-cover"
+          />
         </div>
         <h5 className="fw-bold">David Johnson</h5>
-        <p className="text-muted mb-0">Vet Technician</p>
+        <p className="text-muted mb-0">Internal Medicine (general)</p>
       </div>
     </div>
 
-    {/* Team Member 6 */}
+    
     <div className="col-md-4 col-lg-3">
       <div className="card h-100 border-0 shadow-sm text-center p-4">
-        <div className="avatar mx-auto mb-3 bg-light rounded-circle d-flex align-items-center justify-content-center" style={{width: '120px', height: '120px'}}>
-          <span className="fs-1 text-muted">KA</span>
+        <div className="avatar mx-auto mb-3 rounded-circle overflow-hidden" style={{width: '120px', height: '120px'}}>
+          <img 
+            src="/images/vet6.jpg" 
+            alt="Karim Ahmed" 
+            className="w-100 h-100 object-fit-cover"
+          />
         </div>
         <h5 className="fw-bold">Karim Ahmed</h5>
-        <p className="text-muted mb-0">Vet Technician</p>
+        <p className="text-muted mb-0">General Surgery</p>
       </div>
     </div>
   </div>

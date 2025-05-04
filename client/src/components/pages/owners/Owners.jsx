@@ -77,6 +77,9 @@ export default function Owners() {
           />
 
           <button onClick={handleClick} className="btn-fowner">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                    </svg>
             Find
           </button>
           <br />
@@ -87,7 +90,13 @@ export default function Owners() {
       <div className="container mt-4">
         <h1 className="mb-4">Owners</h1>
         <br />
+        
         <Link to="/owners/create" className="btn-fowner">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 640 512">
+          <path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304
+           178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3
+            512 0 498.7 0 482.3zM504 312l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24
+             10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
           Add Owner
         </Link>
         <br />
@@ -98,6 +107,7 @@ export default function Owners() {
             </div>
           </div>
         ) : (
+          
           <div className="table-responsive mt-4">
             <table className="table table-striped table-hover">
               <thead className="table-dark">

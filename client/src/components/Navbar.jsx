@@ -9,7 +9,7 @@ export default function Navbar() {
                 <nav className='navbar'>
                     <h3 className='title-h3'>
                         <Link to="/Home">
-                            Good Health
+                        Vet Haven
                         </Link>
                     </h3>
 

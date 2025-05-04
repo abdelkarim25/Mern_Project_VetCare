@@ -106,8 +106,8 @@ function Info() {
         <div className="col-md-10">{owner.Telephone}</div>
     </div>
     <div className="mt-4">  {/* Added container styling */}
-        <Link to={`/owners/${id}/update`} className="btn-fowner me-3">Edit Owner</Link>
-        <Link to={`/owners/${id}/pets/create`} className="btn-fowner">Add New Pet</Link>
+        <Link to={`/owners/${id}/update`} className="btn-fowner me-3"><i class="fa-solid fa-user-pen"></i>  Edit Owner</Link>
+        <Link to={`/owners/${id}/pets/create`} className="btn-fowner"><i class="fa-solid fa-paw"></i>  Add New Pet</Link>
     </div>
                         </>
                         }
@@ -134,8 +134,8 @@ function Info() {
                             </div>
                             <div className="d-flex gap-2 mt-3">
                                 <Link to={`/owners/${owner._id}/pets/${pet._id}/edit`} 
-                                    className="btn-fowner flex-grow-1 text-center">
-                                    Edit Pet
+                                    className="btn-fowner flex-grow-1 text-center"><i class="fa-solid fa-pen-to-square"></i>  Edit Pet
+                                    
                                 </Link>
                                 <button onClick={() => handleRemovePet(pet._id)} 
                                     className="btn btn-danger btn-sm flex-grow-1">
@@ -149,8 +149,8 @@ function Info() {
                             <div className="d-flex justify-content-between align-items-center mb-3">
                                 <h5 className="card-title mb-0">Visits</h5>
                                 <Link to={`/owners/${owner._id}/pets/${pet._id}/visits/create`} 
-                                    className="btn-fowner">
-                                    Add Visit
+                                    className="btn-fowner"><i class="fa-solid fa-plus"></i>  Add Visit
+                                      
                                 </Link>
                             </div>
 
@@ -167,8 +167,8 @@ function Info() {
                                         </div>
                                         <div className="d-flex gap-2">
                                             <Link to={`/owners/${owner._id}/pets/${pet._id}/visits/${visit._id}/edit`} 
-                                                className="btn-fowner btn-sm flex-grow-1">
-                                                Edit Visit
+                                                className="btn-fowner btn-sm flex-grow-1 text-center"><i class="fa-solid fa-pen-to-square"></i> Edit Visit
+                                                
                                             </Link>
                                             <button onClick={() => handleRemoveVisit(pet._id, visit._id)} 
                                                 className="btn btn-danger btn-sm flex-grow-1">

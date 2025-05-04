@@ -71,6 +71,9 @@ export default function CreatePet() {
                     <option value="dog">Dog</option>
                     <option value="cat">Cat</option>
                     <option value="bird">Bird</option>
+                    <option value="rabbit">Rabbit</option>
+                    <option value="turtle">Turtle</option>
+                    <option value="hamster">Hamster</option>
                 </select>
                 
                 {error && (

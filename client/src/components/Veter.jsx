@@ -20,28 +20,28 @@ export default function Verter() {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>James Carter</td>
-                                <td>none</td>
+                                <td>Dr. Emily Carter</td>
+                                <td>Dental Care</td>
                             </tr>
                             <tr>
-                                <td>Linda Douglas</td>
-                                <td>dentistry surgery</td>
+                                <td>Dr. Michael Lee</td>
+                                <td>Nutritional Counseling</td>
                             </tr>
                             <tr>
-                                <td>Sharon Jenkins</td>
-                                <td>none</td>
+                                <td>Sarah Thompson</td>
+                                <td>Diagnostics (imaging and laboratory)</td>
                             </tr>
                             <tr>
-                                <td>Helen Leary</td>
-                                <td>radiology</td>
+                                <td>Sophia Fisher</td>
+                                <td>Preventive Medicine and Vaccination</td>
                             </tr>
                             <tr>
-                                <td>Rafael Ortega</td>
-                                <td>surgery</td>
+                                <td>David Johnson</td>
+                                <td>Internal Medicine (general)</td>
                             </tr>
                             <tr>
-                                <td>Henry Stevens</td>
-                                <td>radiology</td>
+                                <td>Karim Ahmed</td>
+                                <td>General Surgery</td>
                             </tr>
                         </tbody>
                     </table>
