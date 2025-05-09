@@ -1,9 +1,8 @@
-// routes/visits.js
 const express = require('express');
 const router = express.Router();
 const Visit = require('../models/Visit');
 
-// Get all visits
+
 router.get('/', async (req, res) => {
   try {
     const visits = await Visit.find().populate({
@@ -16,7 +15,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get visit by ID
+
 router.get('/:id', async (req, res) => {
   try {
     const visit = await Visit.findById(req.params.id).populate({
@@ -30,7 +29,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Create new visit
+
 /*router.post('/', async (req, res) => {
   const visit = new Visit({
     pet: req.body.petId,
@@ -45,7 +44,7 @@ router.get('/:id', async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });*/
-// routes/visits.js
+
 router.post('/', async (req, res) => {
   if (!req.body.petId || !req.body.date || !req.body.description) {
        return res.status(400).json({ message: 'Missing required fields: petId, date, description' });
@@ -66,7 +65,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Update visit
+
 router.put('/:id', async (req, res) => {
   try {
     const visit = await Visit.findById(req.params.id);
@@ -82,7 +81,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete visit
+
 router.delete('/:id', async (req, res) => {
   try {
     const visit = await Visit.findById(req.params.id);

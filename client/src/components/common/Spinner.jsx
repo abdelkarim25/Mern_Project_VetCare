@@ -2,7 +2,7 @@ import React from 'react';
 
 const Spinner = () => {
   const spinnerStyle = {
-    color: 'rgb(109, 179, 63)', // Match your app's green accent color
+    color: 'rgb(109, 179, 63)', 
   };
   
   return (

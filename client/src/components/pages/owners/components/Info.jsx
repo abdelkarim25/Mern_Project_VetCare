@@ -89,23 +89,23 @@ function Info() {
                             </div>
                         :
                         <>
-                            <div className="row mb-3 p-3 border rounded bg-light">  {/* Added container styling */}
+                            <div className="row mb-3 p-3 border rounded bg-light">  
         <div className="col-md-2 fw-bold">Name</div>
         <div className="col-md-10">{owner.First_Name} {owner.Last_Name}</div>
     </div>
-    <div className="row mb-3 p-3 border rounded bg-light">  {/* Added container styling */}
+    <div className="row mb-3 p-3 border rounded bg-light">  
         <div className="col-md-2 fw-bold">Address</div>
         <div className="col-md-10">{owner.Adress}</div>
     </div>
-    <div className="row mb-3 p-3 border rounded bg-light">  {/* Added container styling */}
+    <div className="row mb-3 p-3 border rounded bg-light">  
         <div className="col-md-2 fw-bold">City</div>
         <div className="col-md-10">{owner.City}</div>
     </div>
-    <div className="row mb-3 p-3 border rounded bg-light">  {/* Added container styling */}
+    <div className="row mb-3 p-3 border rounded bg-light">  
         <div className="col-md-2 fw-bold">Telephone</div>
         <div className="col-md-10">{owner.Telephone}</div>
     </div>
-    <div className="mt-4">  {/* Added container styling */}
+    <div className="mt-4">  
         <Link to={`/owners/${id}/update`} className="btn-fowner me-3"><i class="fa-solid fa-user-pen"></i>  Edit Owner</Link>
         <Link to={`/owners/${id}/pets/create`} className="btn-fowner"><i class="fa-solid fa-paw"></i>  Add New Pet</Link>
     </div>
@@ -121,7 +121,7 @@ function Info() {
             <div key={pet._id} className="card pet-card mb-4">
                 <div className="card-body">
                     <div className="row">
-                        {/* Pet Information Section */}
+                       
                         <div className="col-md-5 border-end pe-4">
                             <h5 className="card-title mb-3">{pet.name}</h5>
                             <div className="row mb-2">
@@ -144,7 +144,7 @@ function Info() {
                             </div>
                         </div>
 
-                        {/* Visits Section */}
+                        
                         <div className="col-md-7 ps-4">
                             <div className="d-flex justify-content-between align-items-center mb-3">
                                 <h5 className="card-title mb-0">Visits</h5>

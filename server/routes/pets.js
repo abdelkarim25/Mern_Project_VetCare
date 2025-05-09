@@ -1,11 +1,10 @@
-// routes/petRoutes.js
 const express = require('express');
 const router = express.Router();
 const Pet = require('../models/Pet');
 const Visit = require('../models/Visit');
 const Owner = require('../models/Owner');
 
-// Get all pets
+
 router.get('/', async (req, res) => {
   try {
     const pets = await Pet.find().populate('owner', 'firstName lastName');
@@ -15,7 +14,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get pet by ID with visits
+
 router.get('/:id', async (req, res) => {
   try {
     const pet = await Pet.findById(req.params.id);

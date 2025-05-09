@@ -1,4 +1,3 @@
-// routes/owners.js
 const express = require('express');
 const router = express.Router();
 const Owner = require('../models/Owner');
@@ -6,7 +5,7 @@ const Pet = require('../models/Pet');
 const Visit = require('../models/Visit');
 const { mongoose } = require('mongoose');
 
-// Get all owners
+
 router.get('/owners/', async (req, res) => {
   try {
     const search = {}
@@ -25,7 +24,7 @@ router.get('/owners/', async (req, res) => {
   }
 });
 
-// Get owner by ID
+
 router.get('/owners/:id', async (req, res) => {
   try {
     // const owner = await Owner.findById(req.params.id);
@@ -93,7 +92,7 @@ router.get('/owners/:id', async (req, res) => {
   }
 });
 
-// Create new owner
+
 router.post('/owners/', async (req, res) => {
   const owner_ = {
     First_Name: req.body.firstName?.trim(),
@@ -117,7 +116,7 @@ router.post('/owners/', async (req, res) => {
   }
 });
 
-// Update owner
+
 router.put('/owners/:id', async (req, res) => {
   try {
     const {firstName, lastName, address, city, telephone} = req.body
@@ -143,7 +142,7 @@ router.put('/owners/:id', async (req, res) => {
   }
 });
 
-// Delete owner
+
 router.delete('/owners/:id', async (req, res) => {
   try {
     const owner = await Owner.findById(req.params.id);
@@ -156,7 +155,7 @@ router.delete('/owners/:id', async (req, res) => {
   }
 });
 
-// Get pets
+
 router.get('/owners/:id/pets', async (req, res) => {
   try {
     const pets = await Pet.find({ owner: req.params.id });
@@ -166,7 +165,7 @@ router.get('/owners/:id/pets', async (req, res) => {
   }
 });
 
-// Get pet by Id
+
 router.get('/owners/:id/pets/:petId', async (req, res) => {
   try {
     const pet = await Pet.findById(req.params.petId);
@@ -178,7 +177,7 @@ router.get('/owners/:id/pets/:petId', async (req, res) => {
   }
 });
 
-// Create pet
+
 router.post('/owners/:id/pets', async (req, res) => {
   const pet_ = {
     name: req.body.name?.trim(),
@@ -200,7 +199,7 @@ router.post('/owners/:id/pets', async (req, res) => {
   }
 });
 
-// Update pet
+
 router.put('/owners/:id/pets/:petId', async (req, res) => {
   const {name, birthDate, type} = req.body
   if(!name || !birthDate || !type) {
@@ -224,7 +223,7 @@ router.put('/owners/:id/pets/:petId', async (req, res) => {
   }
 });
 
-// Delete pet
+
 router.delete('/owners/:id/pets/:petId', async (req, res) => {
   try {
     const pet = await Pet.findById(req.params.petId);
@@ -237,7 +236,7 @@ router.delete('/owners/:id/pets/:petId', async (req, res) => {
   }
 });
 
-// Get Visit by Id
+
 router.get('/owners/:id/pets/:petId/visits/:visitId', async (req, res) => {
   try {
     const visit = await Visit.findById(req.params.visitId);
@@ -249,7 +248,7 @@ router.get('/owners/:id/pets/:petId/visits/:visitId', async (req, res) => {
   }
 });
 
-// Create visit
+
 router.post('/owners/:id/pets/:petId/visits', async (req, res) => {
   const visit_ = {
     date: req.body.date?.trim(),
@@ -270,7 +269,7 @@ router.post('/owners/:id/pets/:petId/visits', async (req, res) => {
   }
 });
 
-// Update visit
+
 router.put('/owners/:id/pets/:petId/visits/:visitId', async (req, res) => {
   const {date, description} = req.body
   if(!date || !description) {
@@ -293,7 +292,7 @@ router.put('/owners/:id/pets/:petId/visits/:visitId', async (req, res) => {
   }
 });
 
-// Delete visit
+
 router.delete('/owners/:id/pets/:petId/visits/:visitId', async (req, res) => {
   try {
     const visit = await Visit.findById(req.params.visitId);

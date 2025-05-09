@@ -1,11 +1,10 @@
-// routes/owners.js
 const express = require('express');
 const router = express.Router();
 const Owner = require('../models/Owner');
 const Pet = require('../models/Pet');
 const { mongoose } = require('mongoose');
 
-// Get all owners
+
 router.get('/', async (req, res) => {
   try {
     const search = {}
@@ -92,7 +91,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Create new owner
+
 router.post('/', async (req, res) => {
   const owner_ = {
     First_Name: req.body.firstName?.trim(),
@@ -116,7 +115,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Update owner
+
 router.put('/:id', async (req, res) => {
   try {
     const {firstName, lastName, address, city, telephone} = req.body
@@ -142,7 +141,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete owner
+
 router.delete('/:id', async (req, res) => {
   try {
     const owner = await Owner.findById(req.params.id);
@@ -155,7 +154,7 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// Get pets
+
 router.get('/:id/pets', async (req, res) => {
   try {
     const pets = await Pet.find({ owner: req.params.id });
@@ -165,7 +164,7 @@ router.get('/:id/pets', async (req, res) => {
   }
 });
 
-// Get pet by Id
+
 router.get('/:id/pets/:petId', async (req, res) => {
   try {
     const pet = await Pet.findById(req.params.petId);
@@ -177,7 +176,6 @@ router.get('/:id/pets/:petId', async (req, res) => {
   }
 });
 
-// Create pet
 router.post('/:id/pets', async (req, res) => {
   const pet_ = {
     name: req.body.name?.trim(),
@@ -199,7 +197,7 @@ router.post('/:id/pets', async (req, res) => {
   }
 });
 
-// Update pet
+
 router.put('/:id/pets/:petId', async (req, res) => {
   const {name, birthDate, type} = req.body
   if(!name || !birthDate || !type) {
@@ -223,7 +221,7 @@ router.put('/:id/pets/:petId', async (req, res) => {
   }
 });
 
-// Delete pet
+
 router.delete('/:id/pets/:petId', async (req, res) => {
   try {
     const pet = await Pet.findById(req.params.petId);
@@ -236,7 +234,7 @@ router.delete('/:id/pets/:petId', async (req, res) => {
   }
 });
 
-// Get pet by Id
+
 router.get('/:id/pets/:petId', async (req, res) => {
   try {
     const pet = await Pet.findById(req.params.petId);
@@ -248,7 +246,7 @@ router.get('/:id/pets/:petId', async (req, res) => {
   }
 });
 
-// Create pet
+
 router.post('/:id/pets', async (req, res) => {
   const pet_ = {
     name: req.body.name?.trim(),
@@ -270,7 +268,7 @@ router.post('/:id/pets', async (req, res) => {
   }
 });
 
-// Update pet
+
 router.put('/:id/pets/:petId', async (req, res) => {
   const {name, birthDate, type} = req.body
   if(!name || !birthDate || !type) {
@@ -294,7 +292,7 @@ router.put('/:id/pets/:petId', async (req, res) => {
   }
 });
 
-// Delete pet
+
 router.delete('/:id/pets/:petId', async (req, res) => {
   try {
     const pet = await Pet.findById(req.params.petId);

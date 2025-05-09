@@ -1,4 +1,3 @@
-/* Custom select dropdown */
 .form-select {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
@@ -7,18 +6,17 @@
     color: #333;
   }
   
-  /* Selected option highlight */
   .form-select option:checked {
     background-color: rgb(109,179,63) !important;
     color: white;
   }
   
-  /* Hover effect */
+  
   .form-select option:hover {
-    background-color: rgb(89, 149, 53) !important; /* Slightly darker green */
+    background-color: rgb(89, 149, 53) !important; 
   }
   
-  /* Remove default arrow (optional) */
+ 
   .form-select {
     appearance: none;
     -webkit-appearance: none;
